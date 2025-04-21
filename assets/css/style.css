@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --font: "Raleway", sans-serif;
+  --clr-primary: #33a8db;
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-black-2: #252525;
+  --clr-banner-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6),
+    rgba(49, 168, 221, 0.15),
+    rgba(0, 0, 0, 0.6)
+  );
+  --clr-blue-gradient: linear-gradient(180deg, #33a8db 0%, #1472b7 100%);
+  --clr-bottom-gradient: linear-gradient(
+    180deg,
+    rgba(51, 168, 219, 0) 35%,
+    rgba(51, 168, 219, 0.15) 100%
+  );
+  --clr-inner-shadow: inset -2px 6px 4px 0px #00000066;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font);
+}
+
+img {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-color: #000;
+  color: var(--clr-white);
+  overflow-x: hidden;
+}
+
+/* banner container*/
+.banner-content {
+  width: 100%;
+  min-height: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../images/banner.png"), var(--clr-banner-gradient);
+  row-gap: 2.4rem;
+  border-bottom: 0.1rem solid var(--clr-primary);
+}
+
+.banner-content h1 {
+  font-weight: 900;
+  text-transform: uppercase;
+  background-image: var(--clr-blue-gradient);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 4rem;
+}
+
+.banner-content p {
+  font-size: 2rem;
+  width: 100%;
+  max-width: 51.3rem;
+  text-align: justify;
+  word-break: break-all;
+}
+
+.banner-content button {
+  width: 100%;
+  max-width: 32rem;
+  height: 5rem;
+  border-radius: 0;
+  border-image: var(--clr-blue-gradient);
+  border-image-slice: 1;
+  border-width: 0.3rem;
+  background: #00000000;
+  color: var(--clr-primary);
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 21%;
+  line-height: 100%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.banner-content button:hover {
+  background: var(--clr-blue-gradient);
+  color: var(--clr-black);
+  font-weight: 700;
+  scale: 0.95;
+}
+
+/* middle section - course content */
+#course-content {
+  min-height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  padding: 10rem 1.6rem 10rem 1.6rem;
+}
+
+#course-content h2,
+#professional-challenges h2 {
+  color: var(--clr-primary);
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  letter-spacing: 19%;
+}
+
+#course-content p,
+#professional-challenges p {
+  font-size: 1.6rem;
+  width: 100%;
+  max-width: 79rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+#course-content .modules-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 55rem;
+  row-gap: 2.4rem;
+  padding-inline: 1rem;
+}
+
+.modules-list .module {
+  border: 0.2rem solid var(--clr-primary);
+  border-radius: 100vw;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: var(--clr-black-2);
+  box-shadow: var(--clr-inner-shadow);
+  transition: all 0.3s;
+  cursor: default;
+}
+
+.modules-list .module:hover {
+  scale: 1.05;
+  box-shadow: none;
+}
+
+.modules-list .module span {
+  color: var(--clr-primary);
+  margin-right: 0.6rem;
+}
+
+/* middle section - transform-world */
+#transform-world {
+  border-block: 0.1rem solid var(--clr-primary);
+  min-height: 50rem;
+  background: url("../images/woman-code.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+#transform-world p {
+  width: 25rem;
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: lowercase;
+  text-shadow: 0.3rem 0.2rem 0 var(--clr-primary);
+  margin-left: 10rem;
+}
+
+/* middle section - professional-challenges */
+#professional-challenges {
+  border-bottom: 0.1rem solid var(--clr-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 4rem;
+  padding: 10rem 1.6rem 10rem 1.6rem;
+}
+
+#professional-challenges img {
+  width: 62rem;
+}
+
+#professional-challenges h2 {
+  max-width: 77rem;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 17rem;
+  row-gap: 2rem;
+  background: var(--clr-bottom-gradient);
+  padding-inline: 1.6rem;
+}
+
+footer img {
+  width: 30rem;
+}
+
+footer p {
+  font-size: 1.5rem;
+}
+
+footer a {
+  color: var(--clr-primary);
+}
+
+/* RESPONSIVE */
+/* CSS media query dentro de um stylesheet */
+@media (max-width: 800px) {
+  #professional-challenges h2 {
+    word-break: initial;
+    padding-inline: 1.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-content {
+    padding-inline: 1.6rem;
+  }
+
+  .banner-content h1 {
+    text-align: center;
+  }
+
+  .banner-content p {
+    word-break: keep-all;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  #course-content h2 {
+    text-align: center;
+  }
+
+  .modules-list .module {
+    height: 8rem;
+    text-align: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem;
+  }
+
+  #transform-world p {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  #professional-challenges h2 {
+    font-size: 2.5rem;
+  }
+
+  footer p {
+    text-align: center;
+  }
+}
